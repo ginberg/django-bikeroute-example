@@ -1,0 +1,9 @@
+{% if bikeroute_list %}
+    <ul>
+    {% for bikeroute in bikeroute_list %}
+        <li><a href="{url 'detail' bikeroute.id % }">{{ bikeroute.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No bikeroutes are available.</p>
+{% endif %}

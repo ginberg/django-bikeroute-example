@@ -1,0 +1,9 @@
+{% if reviews_list %}
+    <ul>
+    {% for review in reviews_list %}
+        <li> {{ review.bikeroute.title }} : {{ review.title }} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No reviews are available.</p>
+{% endif %}
